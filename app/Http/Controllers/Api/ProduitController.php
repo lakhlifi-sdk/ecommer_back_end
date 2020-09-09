@@ -40,7 +40,10 @@ class ProduitController extends Controller
 
     public function create(Request $req){
 
+
+
         $product= new Produit();
+        try{
         $product->titre=$req->input('nom');
         $product->contenu=$req->input('description');
          if($request->photo!=''){
