@@ -9,6 +9,8 @@ use DB;
 
 class ProduitController extends Controller
 {
+
+    try{
     //products methode for products
 
     function produits(Request $req){
@@ -48,10 +50,10 @@ class ProduitController extends Controller
         $product->description=$req->description;
         $product->prix=$req->prix;
         $product->promotion=$req->promotion;
-        if($request->photo!=''){
+        if($req->photo!=''){
         $photo=time().'.jpg';
         file_put_contents('storage/produits/'.$photo,base64_decode($request->photo));
-        $post->image_url=$photo;
+        $product->image_url=$photo;
         
         }
         $product->save();
@@ -60,12 +62,20 @@ class ProduitController extends Controller
                                 'success'=> true,
                                 "products"=>$product
                             ]);
-                    }catch(Exception $e){
-                        return esponse()->json([
+        }catch(Exception $e){
+             return esponse()->json([
                                 'success'=> false,
                                 
                             ]);
 
     }
+}
+
+}catch(Exception $e){
+    return response()->json([
+                                'success'=> false,
+                                "products"=>$e
+                            ]);
+
 }
 }
