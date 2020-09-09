@@ -13,21 +13,21 @@ class ProduitController extends Controller
 
     function produits(Request $req){
 
+
+
     	$products = DB::table('produits')
                 ->offset($req->start-1)
                 ->limit($req->count)
                 /*->orderByDesc('id')*/
                 ->get();
-         /*$products["count"]->count($products);      
-
-*/
-		        try{
+        try{
 
 			return response()->json([
-					    		'success'=> true,
-					    		"products"=>$products
-					    	]);
-			    	}catch(Exception $e){
+
+	    		'success'=> true,
+	    		"products"=>$products
+				]);
+		}catch(Exception $e){
 			    		return esponse()->json([
 					    		'success'=> false,
 					    		
@@ -44,9 +44,11 @@ class ProduitController extends Controller
 
         $product= new Produit();
         try{
-        $product->titre=$req->input('nom');
-        $product->contenu=$req->input('description');
-         if($request->photo!=''){
+        $product->nom=$req->nom;
+        $product->description=$req->description;
+        $product->prix=$req->prix;
+        $product->promotion=$req->promotion;
+        if($request->photo!=''){
         $photo=time().'.jpg';
         file_put_contents('storage/produits/'.$photo,base64_decode($request->photo));
         $post->image_url=$photo;
