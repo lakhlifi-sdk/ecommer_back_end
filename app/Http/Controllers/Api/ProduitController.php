@@ -10,7 +10,7 @@ use DB;
 class ProduitController extends Controller
 {
 
-    try{
+
     //products methode for products
 
     function produits(Request $req){
@@ -71,11 +71,5 @@ class ProduitController extends Controller
     }
 }
 
-}catch(Exception $e){
-    return response()->json([
-                                'success'=> false,
-                                "products"=>$e
-                            ]);
 
-}
 }
