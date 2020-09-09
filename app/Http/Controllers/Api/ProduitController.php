@@ -52,7 +52,7 @@ class ProduitController extends Controller
         $product->promotion=$req->promotion;
         if($req->photo!=''){
         $photo=time().'.jpg';
-        file_put_contents('storage/produits/'.$photo,base64_decode($request->photo));
+        file_put_contents('storage/produits/'.$photo,base64_decode($req->photo));
         $product->image_url=$photo;
         
         }
