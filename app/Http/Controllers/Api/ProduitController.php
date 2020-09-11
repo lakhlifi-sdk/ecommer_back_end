@@ -32,10 +32,10 @@ class ProduitController extends Controller
 		}catch(Exception $e){
 			    		return esponse()->json([
 					    		'success'=> false,
-					    		
+
 					    	]);
 
-    	
+
              }
 
         }
@@ -50,13 +50,13 @@ class ProduitController extends Controller
         $product->description=$req->description;
         $product->prix=$req->prix;
         $product->promotion=$req->promotion;
-        $product->image_url="https://upload.wikimedia.org/wikipedia/commons/c/ca/Boston_skyline_from_Longfellow_Bridge_September_2017_panorama_2.jpg";
-        /*if($req->photo!=''){
+        /*$product->image_url="https://upload.wikimedia.org/wikipedia/commons/c/ca/Boston_skyline_from_Longfellow_Bridge_September_2017_panorama_2.jpg";*/
+        if($req->photo!=''){
         $photo=time().'.jpg';
-        file_put_contents('storage/public/produits/'.$photo,base64_decode($req->photo));
+        file_put_contents('storage/public/produits/'.$photo,base64_decode($req->image_url));
         $product->image_url=$photo;
-        
-        }*/
+
+        }
         $product->save();
 
         return response()->json([
@@ -66,7 +66,7 @@ class ProduitController extends Controller
         }catch(Exception $e){
              return esponse()->json([
                                 'success'=> false,
-                                
+
                             ]);
 
     }
