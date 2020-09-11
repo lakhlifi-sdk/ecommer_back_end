@@ -51,7 +51,7 @@ class ProduitController extends Controller
         $product->prix=$req->prix;
         $product->promotion=$req->promotion;
         /*$product->image_url="https://upload.wikimedia.org/wikipedia/commons/c/ca/Boston_skyline_from_Longfellow_Bridge_September_2017_panorama_2.jpg";*/
-        if($req->photo!=''){
+        if($req->image_url!=''){
         $photo=time().'.jpg';
         file_put_contents('storage/public/produits/'.$photo,base64_decode($req->image_url));
         $product->image_url=$photo;
