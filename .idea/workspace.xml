@@ -4,6 +4,7 @@
     <list default="true" id="2f168873-cf18-4095-8dba-ddcaeca95bbd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ProduitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ProduitController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +152,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599835951884</updated>
-      <workItem from="1599835958051" duration="1547000" />
+      <workItem from="1599835958051" duration="3761000" />
     </task>
     <servers />
   </component>
