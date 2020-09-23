@@ -53,8 +53,7 @@ class ProduitController extends Controller
         /*if($req->photo!=''){
         $photo=time().'.jpg';
         file_put_contents('storage/public/produits/'.$photo,base64_decode($req->photo));
-        $product->image_url=$photo;
-
+        $product->image_url=$photo
         }*/
         $product->save();
 
@@ -68,8 +67,54 @@ class ProduitController extends Controller
 
              ]);
 
+        }
+   }
+
+   public function create_view(){
+
+    $products = DB::table('produits')
+                ->orderByDesc('id')
+                ->get();
+
+    return view('home',['products'=>$products]);
+
     }
-}
+
+    public function store(Request $req){
+
+        $products = DB::table('produits')
+                ->orderByDesc('id')
+                ->get();
+
+        $product= new Produit();
+        try{
+        $product->nom=$req->nom;
+        $product->description=$req->description;
+        $product->prix=$req->prix;
+        $product->promotion=$req->promotion;
+        /*$product->image_url="https://upload.wikimedia.org/wikipedia/commons/c/ca/Boston_skyline_from_Longfellow_Bridge_September_2017_panorama_2.jpg";*/
+
+         if($req->hasFile('photo')){
+            $product->image_url =$req->photo->store('products');
+          }
+       /* if($req->photo!=''){
+        $photo=time().'.jpg';
+        file_put_contents('storage/produits/'.$photo,base64_decode($req->photo));
+        $product->image_url=$photo;
+        }*/
+        $product->save();
+
+        return redirect('home');
+
+        }catch(Exception $e){
+             return esponse()->json([
+                                'success'=> false,
+
+             ]);
+
+        }
+   }
+
 
 
 }
