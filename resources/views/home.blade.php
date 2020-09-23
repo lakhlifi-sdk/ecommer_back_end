@@ -152,7 +152,7 @@
                     <td>{{$q->nom}}</td>
                     <td>{{$q->description}}<br></td>
                     <td>{{$q->prix}}</td>
-                    <td>{{asset('storage/'.$q->image_url)}} </td>
+                    <td>{{$q->promotion}}</td>
                    <!--  http://127.0.0.1:8000/storage/produits/btn_post.png -->
                     
                      <!-- <td> <img  src="http://127.0.0.1:8000/storage/produits/.{{$q->image_url}}"/></td> -->
