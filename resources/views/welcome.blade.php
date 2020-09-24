@@ -81,17 +81,17 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Ecommerce
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://www.facebook.com/lakhlifi.essaddiq/">facebook</a>
+                    <a href="https://www.linkedin.com/in/essaddiq-lakhlifi-453729179/">LinkedIn</a>
+                    <a href="https://twitter.com/LEssaddiq">Twitter</a>
+                    <a href="https://lakhlifisys.wordpress.com">Blog</a>
+                    <a href="https://github.com/lakhlifi-sdk">Git</a>
+                    <a href="https://github.com/lakhlifi-sdk">Git</a>
+                    <a href="https://github.com/lakhlifi-sdk">GitHub</a>
                 </div>
             </div>
         </div>
