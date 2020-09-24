@@ -94,12 +94,20 @@ class ProduitController extends Controller
         $product->promotion=$req->promotion;
         /*$product->image_url="https://upload.wikimedia.org/wikipedia/commons/c/ca/Boston_skyline_from_Longfellow_Bridge_September_2017_panorama_2.jpg";*/
 
-         if($req->hasFile('photo')){
+        /* if($req->hasFile('photo')){
             $product->image_url =$req->photo->store('products');
+          }*/
+
+          if($req->hasFile('photo')){
+           $photo=$req->photo->store('image');
+           $product->image_url="http://ecommercebackendd.herokuapp.com/storage/".$photo;
           }
-       /* if($req->photo!=''){
-        $photo=time().'.jpg';
-        file_put_contents('storage/produits/'.$photo,base64_decode($req->photo));
+
+         /* $photo='';
+        if($req->photo!=''){
+
+        $photo=time().'.png';
+        file_put_contents('storage/products/'.$photo,base64_decode($req->photo));
         $product->image_url=$photo;
         }*/
         $product->save();
