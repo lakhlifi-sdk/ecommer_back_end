@@ -49,7 +49,9 @@ class ProduitController extends Controller
         $product->description=$req->description;
         $product->prix=$req->prix;
         $product->promotion=$req->promotion;
-        $product->image_url="https://upload.wikimedia.org/wikipedia/commons/c/ca/Boston_skyline_from_Longfellow_Bridge_September_2017_panorama_2.jpg";
+
+         $product->image_url=$req->photo;
+      /*  $product->image_url="https://upload.wikimedia.org/wikipedia/commons/c/ca/Boston_skyline_from_Longfellow_Bridge_September_2017_panorama_2.jpg";*/
         /*if($req->photo!=''){
         $photo=time().'.jpg';
         file_put_contents('storage/public/produits/'.$photo,base64_decode($req->photo));
@@ -92,16 +94,19 @@ class ProduitController extends Controller
         $product->description=$req->description;
         $product->prix=$req->prix;
         $product->promotion=$req->promotion;
-        /*$product->image_url="https://upload.wikimedia.org/wikipedia/commons/c/ca/Boston_skyline_from_Longfellow_Bridge_September_2017_panorama_2.jpg";*/
+
+
+
+        $product->image_url=$req->photo;
 
         /* if($req->hasFile('photo')){
             $product->image_url =$req->photo->store('products');
           }*/
 
-          if($req->hasFile('photo')){
+          /*if($req->hasFile('photo')){
            $photo=$req->photo->store('image');
-           $product->image_url="http://ecommercebackendd.herokuapp.com/storage/".$photo;
-          }
+           $product->image_url="http://127.0.0.1:8000/storage/".$photo;
+          }*/
 
          /* $photo='';
         if($req->photo!=''){

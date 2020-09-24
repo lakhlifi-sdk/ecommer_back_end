@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Create Product</div>
+                <div class="card-header">Create Product</div><a class="btn" target="_blank" href="https://linkpicture.com/en/?set=en">upold photo url</a>
 <center>
                 <div class="container">
             <div class="row">
@@ -76,7 +76,7 @@
                                     <label for="name" class="col-md-4 control-label">Photo</label>
 
                                     <div class="col-md-6">
-                                        <input id="name" type="file" class="form-control" name="photo" value="{{ old('photo') }}" >
+                                        <input id="name" type="text" class="form-control" name="photo" value="{{ old('photo') }}" >
 
                                         @if ($errors->has('contenu'))
                                             <span class="help-block">
@@ -146,10 +146,10 @@
                 <tr>
                     
 
-                    <td><!-- {{$q->nom}} -->{{$q->image_url}}/td>
+                    <td> {{$q->nom}} </td>
                     <td>{{$q->description}}<br></td>
                     <td>{{$q->prix}}</td>
-                    <td>{{$q->promotion}}<a href="{{$q->image_url}}">ici</a></td>
+                    <td>{{$q->promotion}}</td>
                    <!--  http://127.0.0.1:8000/storage/produits/btn_post.png -->
                     
                      <!-- <td> <img  src="http://127.0.0.1:8000/storage/produits/.{{$q->image_url}}"/></td> -->
