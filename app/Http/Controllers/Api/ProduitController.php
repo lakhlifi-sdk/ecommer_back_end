@@ -10,6 +10,9 @@ class ProduitController extends Controller
 {
 
 
+   
+
+
     //products methode for products
 
     function produits(Request $req){

@@ -15,9 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group(['middleware' => ['web', 'auth']], function () {
+    
+    Route::get('/home', 'Api\ProduitController@create_view')->name('home');
+
+});
+
 Auth::routes();
 
-Route::get('/home', 'Api\ProduitController@create_view')->name('home');
 Route::post('create', 'Api\ProduitController@store');
 
 Route::get('produit/create', 'Api\ProduitController@create_view');
