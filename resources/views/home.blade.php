@@ -135,6 +135,7 @@
             
             <table class="table">
                 <tr>
+                    <th>Product ID</th>
                     <th>Product name</th>
                     <th>Description</th>
                     <th>Prix</th>
@@ -143,9 +144,8 @@
                 </tr>
                 
                 @foreach($products as $q)
-                <tr>
-                    
-
+                <tr>   
+                    <td>{{$q->id}}</td>   
                     <td> {{$q->nom}} </td>
                     <td>{{$q->description}}<br></td>
                     <td>{{$q->prix}}</td>

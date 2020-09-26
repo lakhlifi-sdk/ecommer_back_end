@@ -31,7 +31,7 @@ Route::get('produit/create', 'Api\ProduitController@create_view');
 APP_ENV=local
 APP_KEY=base64:BqFogijUkRwE1l5a0mYgB+h5mVcFLc4sPgVKSuSLCTE=
 APP_DEBUG=true
-APP_URL=http:http://ecommercebackendd.herokuapp.com/
+APP_URL=http://ecommercebackendd.herokuapp.com/
 
 LOG_CHANNEL=stack
 
